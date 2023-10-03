@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHESS </title>
+  <link rel="icon" href="./imges/favicon.ico" type="imges/ico">
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <div class="screen ">
+    <h1 class="chess__h1">CHESS</h1>
+    <a href="#" class="start" id="start">Начать игру</a>
+  </div>
+  </div>
+
+
+
+  <div class="item__imgs">
+    <img class="item__img" src="./imges/585.jpg" alt="">
+  </div>
+
+  <header class="header">
+
+    <!-- <a href="./index.html">
+      <button class="btn__update" data-tooltip="Для перезапуска игры">Update</button>
+    </a> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </header>
+  <div class="wrapper">
+    <main class="main">
+
+
+
+      <div class="container">
+
+
+
+
+        <!-- <audio src="./music/Pat O'Connorly and His Orchestra - St Patrick's Jig.mp3" autoplay="autoplay"></audio> -->
+        <!-- <audio src="./music/Kate Mcmayland and Her Orchestra - An arlac'h.ogg" autoplay="autoplay"></audio> -->
+        <!-- <audio src="./music/frostnovadie.mp3" autoplay="autoplay"></audio> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <button id="myBtn">Открыть окно</button> -->
+
+
+        <div id="myModal" class="modal">
+
+
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Выбор фигуры</h2>
+            </div>
+            <div class="modal-body">
+              <!-- <p>Какой-то текст в теле модального окна</p> -->
+
+              <button class="btn btn__w1" onclick="kll()"><img src="./imges/wQueen.png" alt=""></button>
+              <button class="btn btn__w2"><img src="./imges/wRook.png" alt=""></button>
+              <button class="btn btn__w3"><img src="./imges/wBishop.png" alt=""></button>
+              <button class="btn btn__w4 "><img src="./imges/wKnight.png" alt=""></button>
+
+
+            </div>
+            <div class="modal-body">
+              <!-- <p>Какой-то текст в теле модального окна</p> -->
+
+              <button class="btn btn__b1 "><img src="./imges/bQueen.png" alt=""></button>
+              <button class="btn btn__b2 "><img src="./imges/bRook.png" alt=""></button>
+              <button class="btn btn__b3 "><img src="./imges/bBishop.png" alt=""></button>
+              <button class="btn btn__b4 "><img src="./imges/bKnight.png" alt=""></button>
+
+
+            </div>
+            <div class="modal-footer">
+              <!-- <h3>Футер модального окна</h3> -->
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="grid-container ">
+          <div class="grid-item">
+            <div class="timers">
+              <div id="timer1" class="timer">
+                <h2 data-tooltip="Побитых фигур у черных" class="player__1">Player 1</h2>
+
+                <label data-tooltip="Осталось времени">Время:</label>
+                <span class="minutes">00</span>
+                <span class="seconds">00</span>
+
+              </div>
+              <div id="timer2" class="timer">
+                <h2 data-tooltip="Побитых фигур у белых " class="player__2 ">Player 2</h2>
+
+                <label data-tooltip="Осталось времени">Время:</label>
+                <span class="minutes">00</span>
+                <span class="seconds">00</span>
+
+                <!-- </div> -->
+              </div>
+
+            </div>
+            <div class="btn__transform-item timers">
+              <button class="btn__transform" id="myBlock">Развернуть</button>
+            </div>
+
+          </div>
+          <div class="grid-item">
+            <div>
+              <div class=" text-center">
+
+                <h1 class="h3 mt-3 mb-1">Плеер</h1>
+                <audio id="players" autoplay="autoplay"></audio>
+                <div>
+                  <button data-tooltip="Воспроизвести музыку" onclick="document.getElementById('players').play()"
+                    type="button" class="btn btn-success btn-circle"><i
+                      class="material-icons">play_circle_outline</i></button>
+                  <button data-tooltip="Пауза" onclick="document.getElementById('players').pause()" type="button"
+                    class="btn btn-warning btn-circle"><i class="material-icons">pause</i></button>
+                  <button data-tooltip="Дать громче" onclick="document.getElementById('players').volume+=0.1"
+                    type="button" class="btn btn-info btn-circle"><i class="material-icons">volume_up</i></button>
+                  <button data-tooltip="Дать тише" onclick="document.getElementById('players').volume-=0.1"
+                    type="button" class="btn btn-light btn-circle"><i class="material-icons">volume_down</i></button>
+
+
+                  <!-- <div class="buttons"> -->
+                  <button class="btns start" onclick="play()">
+                    <span data-tooltip="Переключивать время" class="fas fa-play fa-fw fa-3x">&#11137;</span>
+                  </button>
+                  <!-- </div> -->
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <div class="chess__gemes ">
+                  <img class="chess__img" src="./imges/700-nw.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="grid-item">
+
+            <div class="beaten__figures-item">
+              <div class="beaten__figures">
+                <h2 data-tooltip="Побитых фигур у черных" class="player__1" id="Player_1">Player 1</h2>
+              </div>
+              <div class="beaten__figures">
+                <h2 data-tooltip="Побитых фигур у белых " class="player__2 " id="Player_2">Player 2</h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="alert alert-warning" role="alert"> -->
+
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer class="footer">
+    </footer>
+  </div>
+
+
+  <script src="./js/main.min.js"></script>
+  <!-- <script src="/socket.io/socket.io.js"></script> -->
+  <!-- <script>
+    var socket = io();
+
+    var messages = document.getElementById('messages');
+    var form = document.getElementById('form');
+    var input = document.getElementById('input');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (input.value) {
+        socket.emit('chat message', input.value);
+        input.value = '';
+      }
+    });
+
+    socket.on('chat message', function (msg) {
+      var item = document.createElement('li');
+      item.textContent = msg;
+      messages.appendChild(item);
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+  </script> -->
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+</body>
+
+</html>

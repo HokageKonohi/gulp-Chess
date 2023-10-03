@@ -1,0 +1,53 @@
+html,
+body {
+
+	height: 100%;
+	font-family: 'Rubik Bubbles', cursive;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+overflow: hidden;
+
+
+
+
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+
+}
+
+
+
+.main {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  padding-bottom: 15px;
+
+}
+
+
+::-webkit-scrollbar {
+    width: 0;
+}
+::selection{
+	color: rgb(255, 187, 0);
+}
+p::selection {
+	background: rgba(0, 255, 251, 0.141);
+}
+h1::selection {
+	background: rgba(255, 255, 255, 0.201);
+}
