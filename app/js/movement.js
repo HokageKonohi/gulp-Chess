@@ -330,8 +330,3 @@ function handlerDrop(event) {
 }
 
 
-
-// window.addEventListener('mousemove', Mousemove, false)
-// function Mousemove(event) {
-//     console.log(event.screenY)
-// }

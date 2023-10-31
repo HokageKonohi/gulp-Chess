@@ -272,9 +272,6 @@ border-radius: 10px;
 
 }
 
-// [data-tooltip] {
-//   position: relative; /* Относительное позиционирование */ 
-//  }
  [data-tooltip]::after {
   content: attr(data-tooltip); /* Выводим текст */
   position: absolute; /* Абсолютное позиционирование */
